@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo" data-test-id="JaneOdey">JaneOdey</a>
+        <a href="#" class="logo" data-test-id="slackDisplayName">JaneOdey</a>
         
 
         <nav class="navbar" id="myLinks">
@@ -20,18 +20,17 @@
 
         </nav>
 
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class='fas fa-bars'></i></a> -->
     </header>
     <section class="home">
         <div class="home-content">
            <div class="img-content">
             <img src="./photo1.jpg" alt="Jane Odey picture" width="100px" height="100px" data-test-id="slackProfilePicture">
-            <h1>Hi, I'm Jane</h1>
+            <h1 >Hi, I'm Jane</h1>
             
            </div>
            <div class="time">
-           <p> Time in UTC: <span id="ctime" data-test-id="currentDay"></span> 
-            Day: <span id="cday" data-test-id="currentDay"></span> <span data-test-id="slackEmail">Email: janeodeys98@gmail.com</span></p>
+           <p> Time in UTC: <span id="ctime" data-test-id="currentTimeUTC"></span>  ||
+            Day: <span id="cday" data-test-id="currentDay"></span> || <span data-test-id="slackEmail">Email: janeodeys98@gmail.com</span></p>
            </div>
 
             <h3>My goals for the next 2 years in tech.</h3>
@@ -42,7 +41,7 @@
                 <li>Work in a diverse group and build projects both for fun and commercialization.</li>
             </ul>
             <div class="btn-box">
-                <a href="https://hng.tech/learn" data-test-id="hnglinke" target="_blank">hng learn</a>
+                <a href="https://hng.tech/learn" data-test-id="hngLink" target="_blank">hng learn</a>
                 <a href="https://keyword.dog/" data-test-id="keywordlink">Keyword</a>
                 <a href="https://scrapeanyweb.site/" data-test-id="scrapeanywebLink">scrape</a>
 
@@ -55,16 +54,6 @@
 
 
 
-    <script>
-    
-
-    const d = new Date();
-    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    let day = week[d.getUTCDate()]
-
-    document.getElementById("ctime").innerHTML =d.getUTCDate()
-    document.getElementById("cday").innerHTML = day
-    
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
