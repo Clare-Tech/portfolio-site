@@ -3,42 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clare | Portfolio</title>
+    <title>Jane | Portfolio</title>
     <link rel="stylesheet" href="./style.css">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Clare.</a>
+        <a href="#" class="logo" data-test-id="JaneOdey">JaneOdey</a>
+        
 
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
+        <nav class="navbar" id="myLinks">
             <a href="#">Services</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
 
         </nav>
+
+        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class='fas fa-bars'></i></a> -->
     </header>
     <section class="home">
         <div class="home-content">
-            <h1>Hi, I'm Clare</h1>
-            <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum nobis consequatur illum sapiente harum sequi perspiciatis. Itaque exercitationem sint sed totam laboriosam nostrum magni recusandae, rem illo! Eligendi, vel.</p>
+           <div class="img-content">
+            <img src="./photo1.jpg" alt="Jane Odey picture" width="100px" height="100px" data-test-id="slackProfilePicture">
+            <h1>Hi, I'm Jane</h1>
+            
+           </div>
+           <div class="time">
+           <p> Time in UTC: <span id="ctime" data-test-id="currentDay"></span> 
+            Day: <span id="cday" data-test-id="currentDay"></span> <span data-test-id="slackEmail">Email: janeodeys98@gmail.com</span></p>
+           </div>
+
+            <h3>My goals for the next 2 years in tech.</h3>
+            <ul>
+                <li>Become a fullstack engineer</li>
+                <li>Monetize my skill as a software engineer</li>
+                <li>Give back to my community by volunteering to teach kids how to code.</li>
+                <li>Work in a diverse group and build projects both for fun and commercialization.</li>
+            </ul>
             <div class="btn-box">
-                <a href="#">Hire Me</a>
-                <a href="#">Let's Talk</a>
+                <a href="https://hng.tech/learn" data-test-id="hnglinke" target="_blank">hng learn</a>
+                <a href="https://keyword.dog/" data-test-id="keywordlink">Keyword</a>
+                <a href="https://scrapeanyweb.site/" data-test-id="scrapeanywebLink">scrape</a>
 
             </div>
         </div>
-        <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-youtube'></i></a>
-        </div>
+    
 
-        <span class="home-imgHover"></span>
+    
     </section>
+
+
+
+    <script>
+    
+
+    const d = new Date();
+    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let day = week[d.getUTCDate()]
+
+    document.getElementById("ctime").innerHTML =d.getUTCDate()
+    document.getElementById("cday").innerHTML = day
+    
+    </script>
 </body>
 </html>
