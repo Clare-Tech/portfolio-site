@@ -1,7 +1,11 @@
 
- const d = new Date();
-    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    let day = week[d.getUTCDate()]
+ function myFunction(){
+   const currentUTCDate = new Date();
+   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+   let utcDayOfWeek = daysOfWeek[currentUTCDate.getDay()]
+   const utcTime = currentUTCDate.toISOString().split("T")[1].split(".")[0]
 
-    document.getElementById("ctime").innerHTML =d.getUTCDate()
-    document.getElementById("cday").innerHTML = day
+   document.getElementById("utcDayOfWeek").textContent =utcDayOfWeek
+   document.getElementById("utcTime").textContent = utcTime
+ }
+ setInterval(myFunction,1000)
