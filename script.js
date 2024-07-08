@@ -8,4 +8,5 @@
    document.getElementById("utcDayOfWeek").textContent =utcDayOfWeek
    document.getElementById("utcTime").textContent = utcTime
  }
+ myFunction()
  setInterval(myFunction,1000)
