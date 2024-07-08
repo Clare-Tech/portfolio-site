@@ -1,38 +1,43 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #081b29;
     color: #fff;
 }
 
 
-.header{
+.header {
     top: 0;
     left: 0;
     background: transparent;
-    position: fixed;
     width: 100%;
-    padding: 12px 10%;
+    padding: 1rem 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+
 }
-.header .logo{
-    position: relative;
+
+.header .logo {
+    /* position: relative; */
     color: #fff;
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 600;
     text-decoration: none;
-    /* z-index: 1; */
 }
-.logo::before{
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo::before {
     content: '';
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     height: 100%;
@@ -41,18 +46,27 @@ body{
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
 }
-.header .navbar a{
+
+.navbar {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .navbar a {
     color: #ededed;
     text-decoration: none;
-    margin-left: 35px;
     font-size: 18px;
     font-weight: 500;
     transition: .3s;
 }
-.navbar a:hover, .navbar a.active{
+
+.navbar a:hover,
+.navbar a.active {
     color: #00abf0;
 }
-.header .icon{
+
+.header .icon {
     color: #fff;
     text-decoration: none;
     padding: 14px 16px;
@@ -60,81 +74,107 @@ body{
     display: block;
     display: none;
 }
-.time{
+
+.time {
     text-align: center;
 }
 
+/* slack display */
+.slackDetails {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10%;
+    margin-top: 1rem;
+}
+
+.slackDetails div {
+    border: 1px solid #fff;
+    padding: 14px 16px;
+    margin-right: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 2px rgb(247, 246, 246);
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* home section */
-section.home{
+.home {
     display: flex;
     align-items: center;
-    height: 100vh;
-    padding: 12px 10%;
-    background: url(./photo.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed;
+    justify-content: center;
+    padding-top: 2rem;
 
 }
 .home-content{
-    max-width: 600px;
+    width: 100%;
+    padding: 10px 10%;
 }
-.home-content .img-content{
+
+.home-content .img-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    padding: 1rem 0;
 }
-.home-content img{
+
+.home-content img {
     border-radius: 50%;
     border: 2px solid grey;
 }
-.home-content h1{
-    position: relative;
-    font-size: 56px;
+
+.home-content h1 {
+    /* position: relative; */
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.home-content h3{
-    position: relative;
+.goals {
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.home-content h3 {
+    /* position: relative; */
     font-size: 35px;
     font-weight: 700;
     color: #00abf0;
+    text-align: center;
 }
 
-.home-content ul{
+.home-content ul {
     list-style-type: circle;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.home-content ul li{
-    line-height: 1.5em;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.home-content .btn-box{
+.home-content .btn-box {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 345px;
-    height: 40px;
+    padding: 10px 10%;
     margin-top: 1rem;
 }
 
-.btn-box a{
+.btn-box button {
     position: relative;
     text-decoration: none;
     background-color: #00abf0;
-    width: 150px;
-    height: 100%;
+    min-width: 150px;
+    padding: 8px 14px;
     border: 2px solid #00abf0;
     border-radius: 8px;
     display: inline-flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     font-size: 19px;
-    color: #081b29;
+    color: #fff;
     font-weight: 600;
     letter-spacing: 1px;
     z-index: 1;
@@ -144,49 +184,88 @@ section.home{
 }
 
 
-.btn-box a:nth-child(2){
+.btn-box button:nth-child(2) {
     background-color: transparent;
     color: #00abf0;
 }
-.btn-box a:nth-child(2):hover{
-    color: #081b29;
+
+.btn-box button:nth-child(2):hover {
+    color: #fff;
 }
-.btn-box a:nth-child(1):hover{
+
+.btn-box button:nth-child(1):hover {
     color: #fff;
     background-color: transparent;
 }
-.btn-box a::before{
+
+.btn-box button::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background:#00abf0;
+    background: #00abf0;
     z-index: -1;
     transition: .3s ease-in;
 }
-.btn-box a:hover::before{
+
+.btn-box button:hover::before {
     width: 100%;
 }
 
 
 
 /* KEYFRAME ANIMATION */
-@keyframes showRight{
-    100%{
-        width:0;
+@keyframes showRight {
+    100% {
+        width: 0;
     }
 }
 
 
 
 /* media query */
-@media only screen and (max-width: 700px){
-    .header .icon{
+@media only screen and (max-width: 700px) {
+    .header .icon {
         display: block;
     }
-    
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        padding: 12px;
+    }
+
+    .home-content {
+        padding: 10px 5%;
+    }
+
+    .goals {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .slackDetails {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
 }
 
+@media screen and (max-width:590px) {
+    .home {
+        padding: 0 10%;
+    }
 
+    .btn-box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .goals {
+        text-align: center;
+    }
+}

@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane | Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jane | Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+
+
 <body>
     <header class="header">
-        <a href="#" class="logo" data-test-id="slackDisplayName">JaneOdey</a>
-        
+        <div class="logo">
+            <a href="#" data-test-id="slackDisplayName">JaneOdey</a>
+        </div>
 
         <nav class="navbar" id="myLinks">
             <a href="#">Services</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
-
         </nav>
-
+        <div class="time">
+            <p>
+                <span id="utcTime" data-test-id="currentTimeUTC"></span> ||
+                <span id="utcDayOfWeek" data-test-id="currentDay"></span> ||
+                <span data-test-id="slackEmail">janeodeys98@gmail.com</span>
+            </p>
+        </div>
     </header>
     <section class="home">
         <div class="home-content">
-           <div class="img-content">
-            <img src="./photo1.jpg" alt="Jane Odey picture" data-test-id="slackProfilePicture">
-            <h1 >Hi, I'm Jane</h1>
-            
-           </div>
-           <div class="time">
-                <p> Time in UTC: <span id="utcTime" data-test-id="currentTimeUTC"></span>  ||
-                Day: <span id="utcDayOfWeek" data-test-id="currentDay"></span> || <span data-test-id="slackEmail">Email: janeodeys98@gmail.com</span></p>
-           </div>
+            <div class="img-content">
+                <img src="./photo1.jpg" alt="Jane Odey picture" data-test-id="slackProfilePicture" />
+            </div>
+            <h1>Hi, I'm Jane</h1>
 
-            <h3>My goals for the next 2 years in tech.</h3>
-            <ul>
-                <li>Become a fullstack engineer</li>
-                <li>Monetize my skill as a software engineer</li>
-                <li>Give back to my community by volunteering to teach kids how to code.</li>
-                <li>Work in a diverse group and build projects both for fun and commercialization.</li>
-            </ul>
+            <div class="slackDetails">
+                <div>
+                    <p>Slack Display Name</p>
+                    <p class="slackDisplayName">JaneOdey</p>
+                </div>
+                <div>
+                    <p>Slack Email</p>
+                    <p class="slackEmail">janeodeys98@gmail.com</p>
+                </div>
+            </div>
+            <div class="goals">
+                <h3>My goals for the next 2 years in tech.</h3>
+                <ul>
+                    <li>Become a fullstack engineer</li>
+                    <li>Monetize my skill as a software engineer</li>
+                    <li>
+                        Give back to my community by volunteering to teach kids how to code.
+                    </li>
+                    <li>
+                        Work in a diverse group and build projects both for fun and
+                        commercialization.
+                    </li>
+                </ul>
+            </div>
             <div class="btn-box">
-                <a href="https://hng.tech/learn" data-test-id="hngLink" target="_blank">hng learn</a>
-                <a href="https://keyword.dog/" data-test-id="keywordlink">Keyword</a>
-                <a href="https://scrapeanyweb.site/" data-test-id="scrapeanywebLink">scrape</a>
-
+                <button href="https://hng.tech/learn" data-test-id="hngLink" target="_blank">hng learn</button>
+                <button href="https://keyword.dog/" data-test-id="keywordlink">Keyword</button>
+                <button href="https://scrapeanyweb.site/" data-test-id="scrapeanywebLink">scrape</button>
             </div>
         </div>
-    
-
-    
     </section>
-
-
 
     <script src="./script.js"></script>
 </body>
+
 </html>
